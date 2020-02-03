@@ -18,7 +18,7 @@ install.packages("scales")
 
 ```{r}
 ggplot(gapminder, aes(continent, lifeExp)) +
-  geom_boxplot(color = 'forest green') + geom_jitter(color = 'purple', alpha = 0.1)
+  geom_boxplot(color = 'forest green') + geom_jitter(color = 'purple', alpha = 0.1) + facet_wrap(vars(continent))
 
 ```
 ```{r}
@@ -54,7 +54,9 @@ or `size` argument (attribution: ["R for data science"](https://r4ds.had.co.nz/d
 ggplot(mpg, aes(cty, hwy)) + 
   geom_point(alpha= 0.1)
 ```
-
+```{r}
+gapminder
+```
 
 ## Exercise 2: Line for each Country
 
@@ -68,7 +70,7 @@ also notice that `ggplot2` ignores the grouping of a tibble!
 gapminder %>% 
   group_by(country) %>% 
   ggplot(aes(year, lifeExp)) +
-  geom_line()
+  geom_line(aes(group = country)) 
 ```
 
 
@@ -82,7 +84,8 @@ gapminder %>%
 ```{r, fig.width = 5, fig.height = 2}
 ggplot(gapminder, aes(gdpPercap, lifeExp)) +
   geom_point(alpha = 0.2) +
-  scale_x_log10()
+  scale_x_log10(labels = scales::comma_format()) +
+facet_wrap(vars(continent))
 ```
 
 ### 3(b) Bubble Plot
@@ -111,7 +114,9 @@ Instead of alpha transparency, suppose you're wanting to fix the overplotting is
 ```{r, fig.width = 5, fig.height = 2}
 ggplot(gapminder) +
   geom_point(aes(gdpPercap, lifeExp, size = 0.1)) +
-  scale_x_log10(labels = scales::dollar_format())
+  scale_x_log10(labels = scales::dollar_format()) +
+  scale_size_continuous(range = c(0.05, 0.05))
+
 ```
 
 
@@ -131,8 +136,9 @@ tribble(
   3, 0.5, 0.9,
   4, 0.4, 0.5
 ) %>% 
-  ggplot(aes(x, y)) + 
-  geom_line()
+  ggplot(aes(x, y)) +
+  geom_path(arrow = arrow()) +
+  geom_text(label = 'time')
 ```
 
 ## Exercise 5: Life expectancies in Africa
@@ -143,12 +149,11 @@ Fix the plot so that you can actually see the data points.
 
 There is also the problem of overlapping text in the x-axis labels. How could we solve that?
 
-```{r, fig.width = 5, fig.height = 2}
+```{r, fig.width = 25, fig.height = 8}
 gapminder %>% 
   filter(continent == "Americas") %>% 
   ggplot(aes(country, lifeExp)) + 
-  geom_point() +
-  geom_boxplot() +
+  geom_point(alpha = 0.5) +
   scale_x_discrete()
 ```
 
@@ -160,8 +165,8 @@ We're starting with the same plot as above, but instead of the points + boxplot,
 gapminder %>% 
   filter(continent == "Americas") %>% 
   ggplot(aes(country, lifeExp)) + 
-  geom_point() +
-  geom_boxplot()
+  geom_point()
+
 ```
 
 ## Exercise 6: Bar plot madness
@@ -195,7 +200,7 @@ Fix the following bar plot so that it shows these counts.
 
 ```{r}
 ggplot(hair, aes(Hair, n)) +
-  geom_bar()
+  geom_bar(aes= )
 ```
 
 ## Exercise 7: Tiling
