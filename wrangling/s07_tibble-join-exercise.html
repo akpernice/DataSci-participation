@@ -634,6 +634,18 @@ devtools::install_github(&quot;JoeyBernhardt/singer&quot;)</code></pre>
 ##   x1       x2
 ##   &lt;chr&gt; &lt;int&gt;
 ## 1 A         1</code></pre>
+<pre class="r"><code>install.packages(&quot;nycflights13&quot;)</code></pre>
+<pre><code>## Installing package into &#39;C:/Users/akper/OneDrive/Documents/R/win-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## Error in contrib.url(repos, &quot;source&quot;): trying to use CRAN without setting a mirror</code></pre>
+<pre class="r"><code>library(nycflights13)</code></pre>
+<pre class="r"><code>flights &lt;- 
+  left_join(airlines, by = &quot;carrier&quot;) %&gt;% 
+  left_join(airports, by = c(&quot;origin&quot; = &quot;faa&quot;)) %&gt;% 
+  left_join(planes, by = &quot;tailnum&quot;) %&gt;% 
+  left_join(weather) %&gt;% 
+  select(flights, everything)</code></pre>
+<pre><code>## Error in tbl_vars(y): argument &quot;y&quot; is missing, with no default</code></pre>
 </div>
 
 

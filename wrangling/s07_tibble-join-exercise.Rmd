@@ -158,3 +158,28 @@ union(
 ```{r}
 setdiff(y, z)
 ```
+
+
+```{r}
+
+install.packages("nycflights13")
+
+library(nycflights13)
+
+```
+
+```{r}
+flights <- 
+  left_join(airlines, by = "carrier") %>% 
+  left_join(airports, by = c("origin" = "faa")) %>% 
+  left_join(planes, by = "tailnum") %>% 
+  left_join(weather) %>% 
+  select(flights, everything)
+
+
+```
+
+
+
+
+

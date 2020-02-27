@@ -384,3 +384,41 @@ setdiff(y, z)
 ##   <chr> <int>
 ## 1 A         1
 ```
+
+
+
+```r
+install.packages("nycflights13")
+```
+
+```
+## Installing package into 'C:/Users/akper/OneDrive/Documents/R/win-library/3.6'
+## (as 'lib' is unspecified)
+```
+
+```
+## Error in contrib.url(repos, "source"): trying to use CRAN without setting a mirror
+```
+
+```r
+library(nycflights13)
+```
+
+
+```r
+flights <- 
+  left_join(airlines, by = "carrier") %>% 
+  left_join(airports, by = c("origin" = "faa")) %>% 
+  left_join(planes, by = "tailnum") %>% 
+  left_join(weather) %>% 
+  select(flights, everything)
+```
+
+```
+## Error in tbl_vars(y): argument "y" is missing, with no default
+```
+
+
+
+
+
