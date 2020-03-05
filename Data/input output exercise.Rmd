@@ -1,0 +1,41 @@
+---
+title: "Input/Output Exercise"
+author: "Ashlyn Pernice"
+date: "3/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+install.packages("readr")
+install.packages("haven")
+install.packages("here")
+install.packages("readxl")
+install.packages("rio")
+library(tidyverse)
+library(gapminder)
+
+
+(gap_asia_2007 <- gapminder %>% filter(year == 2007, continent == "Asia"))
+
+write_csv(gap_asia_2007, "exported_file.csv")
+
+getwd()
+```
+r install, eval = FALSE - So installations packages don't install everytime you run a code. 
+file.path() or here::here() can be used - so code can run on any system. 
+
+```{}
+
+
+
+
+
+```
+
+
+
+```
