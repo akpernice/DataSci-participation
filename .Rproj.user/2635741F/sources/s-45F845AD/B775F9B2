@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1583420867688.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1314054946",
+    "id" : "B775F9B2",
+    "lastKnownWriteTime" : 1583426668,
+    "last_content_update" : 1583426668516,
+    "path" : "~/GitHub/DataSci-participation/Data/r project exercise.Rmd",
+    "project_path" : "Data/r project exercise.Rmd",
+    "properties" : {
+        "cursorPosition" : "103,92",
+        "last_setup_crc32" : "45F845ADbb338d19",
+        "scrollLine" : "99",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
