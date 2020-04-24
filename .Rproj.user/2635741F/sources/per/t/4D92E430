@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587750039018.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "558911339",
+    "id" : "4D92E430",
+    "lastKnownWriteTime" : 1581007934,
+    "last_content_update" : 1581007934,
+    "path" : "~/GitHub/DataSci-participation/wrangling/s04_data-wrangling-exercise.md",
+    "project_path" : "wrangling/s04_data-wrangling-exercise.md",
+    "properties" : {
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}
