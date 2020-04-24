@@ -35,7 +35,11 @@ b.	S03b ggplot part 2
 
 c.	S10 plot theme exercise
 
-# 4.  Output
+# 4. Data
+
+a. Exercises from class 8
+
+# 5.  Output
 
 -figures from participation exercises 
  
