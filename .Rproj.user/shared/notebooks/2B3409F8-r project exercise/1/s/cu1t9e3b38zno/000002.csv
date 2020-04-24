@@ -1,4 +1,0 @@
-"0",""
-"0","library(haven)"
-"0",""
-"0","(clevel <- haven::read_spss(here::here(""data"", ""s008_data"", ""clevel.sav"")))"

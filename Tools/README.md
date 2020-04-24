@@ -1,3 +1,8 @@
-# DataSci-participation
+# Tools Folder 
 
-this is a repo for in class participation 
+Welcome. 
+
+In this folder you will find: 
+Partcipation exercises from Class 1
+Participation exercises from Class 2
+

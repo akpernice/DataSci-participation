@@ -1,6 +1,0 @@
-"0",""
-"0","dir.create(here::here(""output"", ""s008_data"", ""figures""), recursive = TRUE)"
-"2","'C:\Users\akper\OneDrive\Documents\GitHub\DataSci-participation\output\s008_data\figures' already exists"
-"0","ggsave(here::here(""output"", ""s008_data"", ""figures"", ""clevel_extraversion.svg""), clevel_plot)"
-"2","Saving 7 x 7 in image
-"
