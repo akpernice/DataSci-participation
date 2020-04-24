@@ -253,6 +253,7 @@ gapminder %>%
   coord_flip() +
   theme_bw()
 
+
 ```
 
 ## Grow a factor (OPTIONAL)
